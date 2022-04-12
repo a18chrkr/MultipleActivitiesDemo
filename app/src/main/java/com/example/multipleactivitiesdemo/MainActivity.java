@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d("==>", "Du har klickat på knappen!");
             Log.d("===>", "Username: " + username.getText().toString());
             Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+            intent.putExtra("Username", username.getText().toString());
             startActivity(intent);
             }
         });

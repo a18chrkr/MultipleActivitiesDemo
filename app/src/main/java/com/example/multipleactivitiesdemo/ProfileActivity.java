@@ -36,6 +36,13 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         signout = findViewById(R.id.signout_button);
+
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+
+        String username = extras.getString("Username");
+        Log.d("==>", "Username from intent is: " + username);
+
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,6 +52,8 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 
 
