@@ -2,6 +2,7 @@ package com.example.multipleactivitiesdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -43,9 +44,14 @@ public class MainActivity extends AppCompatActivity {
 
         sign_in = findViewById(R.id.signin_buttom);
         sign_in.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
-                Log.d("==>","Du har klickat på knappen!");
+            Log.d("==>", "Du har klickat på knappen!");
+
+            Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+            startActivity(intent);
+
             }
         });
     }
